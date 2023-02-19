@@ -1,0 +1,18 @@
+<div>
+  <div>Size: {{getSize()}}</div>
+  <table>
+    <tbody>
+      <tr *ngFor="let num of nums; index as i;">
+        <td>
+          <button (click)="put()" *ngIf="i === inp">put &gt;</button>
+        </td>
+        <td>
+          {{num}}
+        </td>
+        <td>
+          <button (click)="get()" *ngIf="i === outp" [disabled]="getSize() < 1">&gt; get</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
